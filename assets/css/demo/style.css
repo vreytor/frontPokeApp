@@ -23444,3 +23444,36 @@ body {
   background: var(--fire);
   box-shadow: 0 0 20px var(--fire);
 }
+
+#pokemon_img_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: -100px;
+}
+
+#pokemon_container {
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon {
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+@media (max-width:1400px) {
+  #pokemon_img_text {
+    margin-bottom: -80px;
+  }
+}
+
+@media (max-width:1140px) {
+  #pokemon_img_text {
+    margin-bottom: -40px;
+  }
+}
