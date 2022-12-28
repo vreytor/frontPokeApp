@@ -23490,6 +23490,10 @@ body {
   background-color:rgba(255, 66, 15, 0.35);
 }
 
+.ocultar {
+  color: transparent;
+}
+
 @media (max-width:1400px) {
   #pokemon_img_text {
     margin-bottom: -80px;
