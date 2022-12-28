@@ -69,7 +69,13 @@ function showPokemonName(pokemonName) {
     .then((data) => {
         const name = data.name;
 
-        pokemons_container.innerHTML += `<div class="info"><h3 class="name">${name}</h3></div>`;
+        if (verifyFavourites(name)) {
+            let text_content = `<div class="info ${name} favorite-pokemon"><h3 class="name">${name}</h3></div>`
+            pokemons_container.innerHTML += text_content;
+        } else {
+            let text_content = `<div class="info ${name}"><h3 class="name">${name}</h3></div>`
+            pokemons_container.innerHTML += text_content;
+        }
 
         pokemon_container.append(pokemons_container)
     })
@@ -80,4 +86,35 @@ function showPokemonName(pokemonName) {
 
 function sortByName(pokemons) {
     pokemons.sort((a, b) => a.name.localeCompare(b.name))
+}
+
+
+// Cambiar color de elegidos
+
+function verifyFavourites(name) {    
+    const userData = JSON.parse(localStorage.getItem("usuario"))
+    const user_uid = userData.usuario.uid
+
+    fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
+        method: 'get'
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        
+        const filteredData = filterByUserId(data, user_uid);
+
+        console.log(filteredData,'filteredData');
+
+        const filteredName = findByName(filteredData, name)
+
+        return filteredName
+    });
+}
+
+function findByName(filteredData, name) {
+    return filteredData.find((pokemon) => pokemon.name == name)
+}
+
+function filterByUserId(data, userId) {
+    return data.filter((item) => item.user_id === userId);
 }

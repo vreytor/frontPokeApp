@@ -23499,6 +23499,11 @@ body {
   cursor: pointer;
 }
 
+.favorite-pokemon {
+  color: red;
+  background-color: pink;
+}
+
 @media (max-width:1400px) {
   #pokemon_img_text {
     margin-bottom: -80px;

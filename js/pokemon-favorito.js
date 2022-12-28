@@ -7,10 +7,8 @@ btn_add_favourites.addEventListener('click', confirmAddFavourites)
 
 // Debe solicitar la confirmación de usuario
 function confirmAddFavourites() {
-    if(confirm('está usted seguro?')) { // Si le da a aceptar llama a la función addFavourites
+    if(confirm('¿Desea añadirlo a su lista de favoritos?')) { // Si le da a aceptar llama a la función addFavourites
         addFavourites()
-    } else {
-        console.log('vuelva pronto')
     }
 }
 
