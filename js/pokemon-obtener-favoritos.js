@@ -2,7 +2,7 @@ const userData = JSON.parse(localStorage.getItem("usuario"))
 const user_uid = userData.usuario.uid
 
 function obtenerFavoritos() {    
-    fetch(`http://localhost:9000/api/user/`, {
+    fetch(`http://localhost:9000/api/favoritos/`, {
         method: 'get'
     })
     .then((response) => response.json())
