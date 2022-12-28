@@ -23444,3 +23444,64 @@ body {
   background: var(--fire);
   box-shadow: 0 0 20px var(--fire);
 }
+
+#pokemon_img_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: -100px;
+}
+
+#pokemon_favoritos_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#pokemon_container {
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon {
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn {
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.añadir {
+  background-color:rgba(0, 182, 122, 0.35);
+}
+
+.eliminar {
+  background-color:rgba(255, 66, 15, 0.35);
+}
+
+.ocultar {
+  color: transparent;
+}
+
+@media (max-width:1400px) {
+  #pokemon_img_text {
+    margin-bottom: -80px;
+  }
+}
+
+@media (max-width:1140px) {
+  #pokemon_img_text {
+    margin-bottom: -40px;
+  }
+}

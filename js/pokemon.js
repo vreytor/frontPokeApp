@@ -104,17 +104,15 @@ function createPokemon(pokemon2) {
 
 }
 
-let getUser = () => {
-  let userTemp = JSON.parse(localStorage.getItem("usuario"));
-  console.log(userTemp.usuario, 'data usuario');
+// let getUser = () => {
+//   let userTemp = JSON.parse(localStorage.getItem("usuario"));
+//   console.log(userTemp.usuario, 'data usuario');
 
-  document.getElementById('nombreUsuario').value = userTemp.usuario.nombre;
-  /* let emailUsuario = document.getElementById('emailUsuario'); */
-}
+//   document.getElementById('nombreUsuario').value = userTemp.usuario.nombre;
+//   /* let emailUsuario = document.getElementById('emailUsuario'); */
+// }
 
-getUser();
-
-
+// getUser();
 
 dataPokemon();
 

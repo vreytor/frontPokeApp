@@ -53,7 +53,7 @@
               <div class="mdc-expansion-panel" id="ui-sub-menu">
                 <nav class="mdc-list mdc-drawer-submenu">
                   <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/ui-features/pokemonlist.html">
+                    <a class="mdc-drawer-link" href="../pokemon/pokemonlist.html">
                       <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                         aria-hidden="true">perm_media</i>
                       Generación 1
@@ -63,7 +63,7 @@
               </div>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="pages/tables/basic-tables.html">
+              <a class="mdc-drawer-link" href="../pokemon/pokemon-favorito.html">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                   aria-hidden="true">favorite</i>
                 Pokemon Favoritos
@@ -139,6 +139,15 @@
                 </div>
               </div>
 
+              <div id="pokemon_img_text">
+                <select name="pokemon" id="pokemon">
+                  <option value="">Elige un pokemon</option>
+                </select>
+                <section id="pokemon_container"></section>
+                <button class="btn añadir" id="btn_add_favourites">Añadir a Favoritos</button>
+                <button class="btn eliminar" id="btn_delete_favourites">Eliminar de Favoritos</button>
+              </div>
+
               <div class="pokedex__pokemon-content" id="pokemonContent">
               </div>
             </div>
@@ -181,6 +190,8 @@
   <script src="../../assets/js/dashboard.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../../js/pokemon.js"></script>
+  <script src="../../js/pokemon-mostrar.js"></script>
+  <script src="../../js/pokemon-favorito.js"></script>
   <!-- End custom js for this page-->
 </body>
 

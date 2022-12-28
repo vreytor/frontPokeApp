@@ -120,13 +120,9 @@ document.getElementById('form2').addEventListener('submit', function (element) {
   }
 });
 
-let getUser = () => {
-  let userTemp = JSON.parse(localStorage.getItem("usuario"));
-  console.log(userTemp, 'data usuario');
-}
+// let getUser = () => {
+//   let userTemp = JSON.parse(localStorage.getItem("usuario"));
+//   console.log(userTemp, 'data usuario');
+// }
 
-getUser();
-
-
-
-
+// getUser();
