@@ -1,7 +1,7 @@
-const userData = JSON.parse(localStorage.getItem("usuario"))
-const user_uid = userData.usuario.uid
-
 function obtenerFavoritos() {    
+    const userData = JSON.parse(localStorage.getItem("usuario"))
+    const user_uid = userData.usuario.uid
+
     fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
         method: 'get'
     })
@@ -47,7 +47,7 @@ const pokemon_favoritos_container = document.getElementById('pokemon_favoritos_c
 function muestraPokemonFavorito(filteredData) {
     for (const index in filteredData) {
         let pokemon_total_container = document.createElement('div')
-        let pokemon_close = document.createElement('div')
+        let pokemon_delete_button = document.createElement('i');
         let pokemon_img = document.createElement('div')
         let pokemon_text = document.createElement('div')
 
@@ -56,21 +56,24 @@ function muestraPokemonFavorito(filteredData) {
         const name = filteredData[index].name;
         const type = filteredData[index].type;
 
-        let id_content = `<i class="fa-sharp fa-solid fa-circle-xmark ocultar" id="${id}"></i>`
         let img_content = `<div class="img-container"><img src="${img}"></div>`
         let text_content = `<div class="info"><h3 class="name">${name}</h3></div>
         <small class="type">Tipo: <span>${type}</span></small>`
         
-        pokemon_close.innerHTML = id_content;
         pokemon_img.innerHTML = img_content;
         pokemon_text.innerHTML += text_content;
 
-        pokemon_total_container.append(pokemon_close)
-        pokemon_total_container.append(pokemon_img)
-        pokemon_total_container.append(pokemon_text)
+        pokemon_delete_button.classList.add('fa-sharp', 'fa-solid', 'fa-circle-xmark');
         pokemon_total_container.classList.add('pokemon')
         pokemon_total_container.style.backgroundColor = colors[type];
-        pokemon_favoritos_container.append(pokemon_total_container)
+
+        pokemon_total_container.append(pokemon_delete_button);
+        pokemon_total_container.append(pokemon_img)
+        pokemon_total_container.append(pokemon_text)
+
+        pokemon_favoritos_container.append(pokemon_total_container);
+
+        eliminarPokemonFavorito(pokemon_delete_button, id)
     }   
 }
 
