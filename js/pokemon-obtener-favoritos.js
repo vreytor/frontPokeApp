@@ -2,7 +2,7 @@ const userData = JSON.parse(localStorage.getItem("usuario"))
 const user_uid = userData.usuario.uid
 
 function obtenerFavoritos() {    
-    fetch(`http://localhost:9000/api/favoritos/`, {
+    fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
         method: 'get'
     })
     .then((response) => response.json())
@@ -10,7 +10,7 @@ function obtenerFavoritos() {
         
         const filteredData = filterByUserId(data, user_uid);
 
-        console.log(filteredData)
+        console.log(filteredData,'filteredData');
 
         muestraPokemonFavorito(filteredData)
     });
@@ -74,4 +74,4 @@ function muestraPokemonFavorito(filteredData) {
     }   
 }
 
-obtenerFavoritos()
+obtenerFavoritos();

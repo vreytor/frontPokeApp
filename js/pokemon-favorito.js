@@ -45,7 +45,7 @@ function addFavourites() {
 }
 
 function sendFavourites(pokeData) {
-    fetch('http://localhost:9000/api/favoritos/', {
+    fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
         method: 'POST',
         body: JSON.stringify(pokeData),
         headers: {
