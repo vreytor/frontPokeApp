@@ -23465,6 +23465,23 @@ body {
   padding: 10px;
 }
 
+.btn {
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.añadir {
+  background-color:rgba(0, 182, 122, 0.35);
+}
+
+.eliminar {
+  background-color:rgba(255, 66, 15, 0.35);
+}
 
 @media (max-width:1400px) {
   #pokemon_img_text {
