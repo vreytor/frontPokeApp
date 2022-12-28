@@ -23469,7 +23469,9 @@ body {
 #pokemon {
   width: 200px;
   border-radius: 10px;
+  border: none;
   padding: 10px;
+  font-size: 18px;
 }
 
 .btn {
@@ -23484,14 +23486,17 @@ body {
 
 .añadir {
   background-color:rgba(0, 182, 122, 0.35);
+  cursor: pointer;
 }
 
-.eliminar {
-  background-color:rgba(255, 66, 15, 0.35);
+.pokemon {
+  position: relative;
 }
 
-.ocultar {
-  color: transparent;
+.fa-sharp {
+  position: absolute;
+  left: 83%;
+  cursor: pointer;
 }
 
 @media (max-width:1400px) {
