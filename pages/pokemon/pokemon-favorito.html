@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../../assets/css/demo/style.css">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="../../assets/images/favicon.png" />
-
+  
 </head>
 
 <body>
@@ -45,7 +45,7 @@
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-expansion-panel-link" href="../pokemon/pokemon-favorito.html" data-toggle="expansionPanel" data-target="ui-sub-menu">
+              <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">list</i>
                 Pokemon List
                 <i class="mdc-drawer-arrow material-icons">chevron_right</i>
@@ -53,7 +53,7 @@
               <div class="mdc-expansion-panel" id="ui-sub-menu">
                 <nav class="mdc-list mdc-drawer-submenu">
                   <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/ui-features/pokemonlist.html">
+                    <a class="mdc-drawer-link" href="../../pages/pokemon/pokemonlist.html">
                       <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                         aria-hidden="true">perm_media</i>
                       Full
@@ -63,7 +63,7 @@
               </div>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="pages/tables/basic-tables.html">
+              <a class="mdc-drawer-link" href="../pokemon/pokemon-favorito.html">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
                   aria-hidden="true">favorite</i>
                 Pokemon Favorites
@@ -271,18 +271,12 @@
             <div class="pokedex-container">
               <div class="pokedex__header">
                 <div class="pokedex__header-title">
-                  <h1>Pokedex List</h1>
+                  <h1>Pokedex Lista de Favoritos</h1>
                 </div>
               </div>
 
-              <div id="pokemon_img_text">
-                <select name="pokemon" id="pokemon">
-                  <option value="">Elige un pokemon</option>
-                </select>
-                <section id="pokemon_container"></section>
-                <button class="btn añadir" id="btn_add_favourites">Añadir a Favoritos</button>
-                <button class="btn eliminar" id="btn_delete_favourites">Eliminar de Favoritos</button>
-              </div>
+                <section id="pokemon_favoritos_container"></section>
+                <!-- <button class="btn eliminar" id="btn_delete_favourites">Eliminar de Favoritos</button> -->
 
               <div class="pokedex__pokemon-content" id="pokemonContent">
               </div>
@@ -325,9 +319,10 @@
   <!-- Custom js for this page-->
   <script src="../../assets/js/dashboard.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="../../js/pokemon.js"></script>
-  <script src="../../js/pokemon-mostrar.js"></script>
-  <script src="../../js/pokemon-favorito.js"></script>
+  <!-- <script src="../../js/pokemon.js"></script> -->
+  <!-- <script src="../../js/pokemon-mostrar.js"></script> -->
+  <!-- <script src="../../js/pokemon-favorito.js"></script> -->
+  <script src="../../js/pokemon-obtener-favoritos.js"></script>
   <!-- End custom js for this page-->
 </body>
 

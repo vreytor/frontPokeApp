@@ -24,31 +24,28 @@ function addFavourites() {
     })
     .then((response) => response.json())
     .then((data) => {
-        let userTemp = JSON.parse(localStorage.getItem(usuario[0].uid))
-
         const img = data.sprites.front_default;
         const name = data.name;
         const type = data.types[0].type.name;
+
+        const userData = JSON.parse(localStorage.getItem("usuario"));
+        const uid = userData.usuario.uid;
         
         let pokeData = { // Este objeto debería enviarse a la base de datos
+            user_id: uid,
             name: name,
             img: img,
             type: type
         }
 
-
         console.log(pokeData);
-        console.log(userTemp)
 
         sendFavourites(pokeData)
-
-        
-        
     });
 }
 
 function sendFavourites(pokeData) {
-    fetch('https://backapipoke-production.up.railway.app/api/usuarios', {
+    fetch('http://localhost:9000/api/user/', {
         method: 'POST',
         body: JSON.stringify(pokeData),
         headers: {
@@ -63,11 +60,3 @@ function sendFavourites(pokeData) {
         console.error('Error:', error);
       });
 }
-
-
-
-// Agrega los datos del pokemon a la base de datos
-
-
-
-// El background del nombre del pokemon debe cambiar

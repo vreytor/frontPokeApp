@@ -23454,6 +23454,13 @@ body {
   margin-bottom: -100px;
 }
 
+#pokemon_favoritos_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 #pokemon_container {
   display: flex;
   justify-content: center;
