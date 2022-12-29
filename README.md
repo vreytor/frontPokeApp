@@ -63,11 +63,14 @@ El servidor que usa el proyecto ha sido desplegado, por lo que para ver la funci
 
     ▪️	Repita Contraseña
 
-    Para editar los datos del usuario, presionar el botón Modificar.
+    Para editar los datos del usuario, presionar el botón Guardar.
+ 
+    También se muestra el perfil de usuario.
+
+    #
+    ![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/profile.jpg)
+    #
     
-    Para eliminar el usuario presionar el botón Eliminar
-
-
 # 🔘 Lenguajes:
 
   - Html 5
