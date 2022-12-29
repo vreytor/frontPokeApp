@@ -69,7 +69,7 @@
   
   ▪️ Paola Zuñiga
   
-  ▪️ Yonathan
+  ▪️ Yonathan Rodriguez Zelaya
   
   #
 ![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/index.jpg)
