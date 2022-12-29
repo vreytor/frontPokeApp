@@ -21,9 +21,9 @@
 
     Luego presionar el botón Regístrate, una vez registrado le saldrá una ventana de (Lista Pokemon).
 
-3.	Lista Pokemon: En esta ventana tendrá un listado de pokemones y puede seleccionar uno de ellos, para agregar a sus favoritos presionando el botón Añadir Favoritos. Los pokemones favoritos se encuentran en la ventana (Pokemon Favorites)
+3.	Lista Pokemon: En esta ventana está el listado de pokemones y seleccionar uno de ellos, para agregar a sus favoritos presionando el botón Añadir Favoritos. Los pokemones favoritos se encuentran en la ventana (Pokemon Favorites)
 
-4.	Pokemon Favorites: En esta ventana está el listado de pokemones favoritos, puede eliminar también presionando el botón Eliminar pokemones si ya no quiere en su lista.
+4.	Pokemon Favorites: En esta ventana está el listado de pokemones favoritos, para eliminar presionar el icono ❎ y se eliminará de la lista.
 
 
 5.	Profile: En esta ventana se observa el formulario de usuario, con sus siguientes campos:
