@@ -13,14 +13,14 @@ let dataPokemonAll = async (result) => {
       });
   });
 
-  //arrayPokemon.sort((a, b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0));
+
 }
 
 
 let dataPokemon = async () => {
   const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151').catch((err) => console.log("Error:", err));
+  
   dataPokemonAll(response.data.results);
-  console.log('pokemones debieron dibujarse');
 }
 
 function fetchPokemonData(pokemon) {

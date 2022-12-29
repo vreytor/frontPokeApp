@@ -53,7 +53,8 @@ function muestraPokemonFavorito(filteredData) {
 
         const id = filteredData[index]._id;
         const img = filteredData[index].img;
-        const name = filteredData[index].name;
+        //const name = filteredData[index].name;
+        const name = filteredData[index].name[0].toUpperCase() + filteredData[index].name.slice(1);
         const type = filteredData[index].type;
 
         let img_content = `<div class="img-container"><img src="${img}"></div>`

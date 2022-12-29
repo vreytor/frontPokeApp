@@ -19,11 +19,17 @@ function selectPoke() {
     .then((data) => {
         const pokemons = data.pokemon_species;
         let html = '';
-
         sortByName(pokemons)
         
+
+        pokemons.map(element => {
+            let string = element.name;           
+            element.nombre = string[0].toUpperCase() + string.slice(1);
+            
+        })
+
         for (const i in pokemons) {
-            html += '<option value=' + pokemons[i].name + '>' + pokemons[i].name + '</option>'
+            html += '<option value=' + pokemons[i].name + '>' + pokemons[i].nombre + '</option>'
         }
 
         pokemon.innerHTML = html; // Añade los options con los nombres de los pokemones al select
@@ -63,14 +69,14 @@ function showPokemonImg(pokemonName) {
 
 function showPokemonName(pokemonName) {
     const urlName = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
-
     fetch(urlName, {
         method: 'get'
     })
     .then((response) => response.json())
     .then((data) => {
         const name = data.name;
-
+        const nameUpperCase = data.name[0].toUpperCase() + data.name.slice(1);
+        console.log(name, 'Nombre pokimon')
         // if (verifyFavourites(name) == true ) {
         //     let text_content = `<div class="info ${name} favorite-pokemon"><h3 class="name">${name}</h3></div>`
         //     pokemons_container.innerHTML += text_content;
@@ -79,7 +85,7 @@ function showPokemonName(pokemonName) {
         //     pokemons_container.innerHTML += text_content;
         // }
 
-        let text_content = `<div class="info ${name}"><h3 class="name">${name}</h3></div>`
+        let text_content = `<div class="info ${name}"><h3 class="name">${nameUpperCase}</h3></div>`
         pokemons_container.innerHTML += text_content;
 
         pokemon_container.append(pokemons_container)
