@@ -55,6 +55,8 @@ function showPokemonImg(pokemonName) {
 
         pokemon_container.append(pokemons_container)
     });
+
+    
 }
 
 // Muestra el nombre del pokemon seleccionado
@@ -69,13 +71,16 @@ function showPokemonName(pokemonName) {
     .then((data) => {
         const name = data.name;
 
-        if (verifyFavourites(name)) {
-            let text_content = `<div class="info ${name} favorite-pokemon"><h3 class="name">${name}</h3></div>`
-            pokemons_container.innerHTML += text_content;
-        } else {
-            let text_content = `<div class="info ${name}"><h3 class="name">${name}</h3></div>`
-            pokemons_container.innerHTML += text_content;
-        }
+        // if (verifyFavourites(name) == true ) {
+        //     let text_content = `<div class="info ${name} favorite-pokemon"><h3 class="name">${name}</h3></div>`
+        //     pokemons_container.innerHTML += text_content;
+        // } else {
+        //     let text_content = `<div class="info ${name}"><h3 class="name">${name}</h3></div>`
+        //     pokemons_container.innerHTML += text_content;
+        // }
+
+        let text_content = `<div class="info ${name}"><h3 class="name">${name}</h3></div>`
+        pokemons_container.innerHTML += text_content;
 
         pokemon_container.append(pokemons_container)
     })
@@ -89,32 +94,33 @@ function sortByName(pokemons) {
 }
 
 
+
 // Cambiar color de elegidos
 
-function verifyFavourites(name) {    
-    const userData = JSON.parse(localStorage.getItem("usuario"))
-    const user_uid = userData.usuario.uid
+// function verifyFavourites(name) {    
+//     const userData = JSON.parse(localStorage.getItem("usuario"))
+//     const user_uid = userData.usuario.uid
 
-    fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
-        method: 'get'
-    })
-    .then((response) => response.json())
-    .then((data) => {
+//     fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
+//         method: 'get'
+//     })
+//     .then((response) => response.json())
+//     .then((data) => {
         
-        const filteredData = filterByUserId(data, user_uid);
+//         const filteredData = filterByUserId(data, user_uid);
 
-        console.log(filteredData,'filteredData');
+//         console.log(filteredData,'filteredData');
 
-        const filteredName = findByName(filteredData, name)
+//         const filteredName = findByName(filteredData, name)
 
-        return filteredName
-    });
-}
+//         console.log(filteredName)
+//     });
+// }
 
-function findByName(filteredData, name) {
-    return filteredData.find((pokemon) => pokemon.name == name)
-}
+// function findByName(filteredData, name) {
+//     return filteredData.find((pokemon) => pokemon.name == name)
+// }
 
-function filterByUserId(data, userId) {
-    return data.filter((item) => item.user_id === userId);
-}
+// function filterByUserId(data, userId) {
+//     return data.filter((item) => item.user_id === userId);
+// }
