@@ -72,12 +72,12 @@
   ▪️ Yonathan
   
   #
-[Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/index.jpg)
+![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/index.jpg)
   #
-[Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/registro.jpg)
+![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/registro.jpg)
   #
-[Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/home.jpg)
+![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/home.jpg)
   #
-[Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/list.jpg)
+![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/list.jpg)
   #
-[Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/favorite.jpg)
+![Image Text](https://github.com/vreytor/frontPokeApp/blob/main/img/favorite.jpg)
