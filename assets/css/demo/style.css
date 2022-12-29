@@ -22128,9 +22128,9 @@ address p {
   right: -10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 57px;
-  height: 57px;
-  border-radius: 2px;
+  width: 85px;
+  height: 85px;
+  border-radius: 50px;
   background-color: #00b67a;
   display: -webkit-flex;
   display: flex;
@@ -22138,7 +22138,7 @@ address p {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  box-shadow: 0 0 10px 5px rgba(0, 182, 122, 0.35);
+  
 }
 
 @media (max-width: 992px) {
@@ -22153,48 +22153,48 @@ address p {
 }
 
 .mdc-card.info-card.info-card--primary .card-inner .card-icon-wrapper {
-  background-color: #7a00ff;
-  box-shadow: 0 0 10px 5px rgba(122, 0, 255, 0.35);
+  background-color: #8FD594;
+  
 }
 
 .mdc-card.info-card.info-card--secondary .card-inner .card-icon-wrapper {
-  background-color: #ff420f;
-  box-shadow: 0 0 10px 5px rgba(255, 66, 15, 0.35);
+  background-color: #FF5D5D;
+  
 }
 
 .mdc-card.info-card.info-card--info .card-inner .card-icon-wrapper {
   background-color: #00bbdd;
-  box-shadow: 0 0 10px 5px rgba(0, 187, 221, 0.35);
+  
 }
 
 .mdc-card.info-card.info-card--success .card-inner .card-icon-wrapper {
-  background-color: #00b67a;
-  box-shadow: 0 0 10px 5px rgba(0, 182, 122, 0.35);
+  background-color: #7a00ff;
+  
 }
 
 .mdc-card.info-card.info-card--warning .card-inner .card-icon-wrapper {
   background-color: #ffc107;
-  box-shadow: 0 0 10px 5px rgba(255, 193, 7, 0.35);
+  
 }
 
 .mdc-card.info-card.info-card--danger .card-inner .card-icon-wrapper {
-  background-color: #ff420f;
-  box-shadow: 0 0 10px 5px rgba(255, 66, 15, 0.35);
+  background-color: #FF5D5D;
+ 
 }
 
 .mdc-card.info-card.info-card--light .card-inner .card-icon-wrapper {
   background-color: #f0f1f1;
-  box-shadow: 0 0 10px 5px rgba(240, 241, 241, 0.35);
+  
 }
 
 .mdc-card.info-card.info-card--dark .card-inner .card-icon-wrapper {
   background-color: #3e4b5b;
-  box-shadow: 0 0 10px 5px rgba(62, 75, 91, 0.35);
+  
 }
 
 .mdc-card.info-card.info-card--white .card-inner .card-icon-wrapper {
   background-color: #fff;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.35);
+ 
 }
 
 .mdc-card .options-icon,
@@ -23185,7 +23185,8 @@ body {
 }
 
 .pokedex__header {
-  background: rgb(23, 32, 48);
+  background: #1b2432;
+  border-radius: 10px;
   min-height: 100px;
   overflow: hidden;
   display: flex;
@@ -23197,9 +23198,10 @@ body {
 }
 
 .pokedex__header-title {
-  color: rgb(127, 138, 163);
+  color: #fff;
   margin: 0 25px 0 10px;
   text-align: left;
+  font-size: 4rem;
 }
 
 .pokedex__header-search {
