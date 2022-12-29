@@ -38,9 +38,34 @@ function addFavourites() {
 
         console.log(pokeData);
 
-        sendFavourites(pokeData)
+        // Agregamos una llamada a la API para obtener la lista de Pokémon favoritos del usuario
+        fetch(`https://backapipoke-production.up.railway.app/api/favoritos/`, {
+            method: 'get'
+        })
+        .then((response) => response.json())
+        .then((data) => {
+
+          const filteredData = filterByUserId(data, uid);
+
+            // Recorremos la lista de Pokémon favoritos
+            for (let favorite of filteredData) {
+                // Si el nombre del Pokémon ya se encuentra en la lista, mostramos un mensaje y evitamos enviar los datos al servidor
+                if (favorite.name === name) {
+                    alert('Ya ha sido agregado con anterioridad');
+                    return;
+                }
+            }
+            // Si el nombre del Pokémon no se encuentra en la lista, enviamos los datos al servidor
+            sendFavourites(pokeData);
+        });
     });
 }
+
+
+function filterByUserId(data, userId) {
+  return data.filter((item) => item.user_id === userId);
+}
+
 
 function sendFavourites(pokeData) {
     fetch('https://backapipoke-production.up.railway.app/api/favoritos/', {
