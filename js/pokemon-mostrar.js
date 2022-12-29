@@ -32,7 +32,7 @@ function selectPoke() {
             html += '<option value=' + pokemons[i].name + '>' + pokemons[i].nombre + '</option>'
         }
 
-        pokemon.innerHTML = html; // Añade los options con los nombres de los pokemones al select
+        pokemon.innerHTML += html; // Añade los options con los nombres de los pokemones al select
     });
 }
 
