@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokedex</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/jvectormap/jquery-jvectormap.css">
+    <!-- End plugin css for this page -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/demo/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <script src="../../assets/js/preloader.js"></script>
+    <div class="body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+            <div class="mdc-drawer__header">
+                <a href="../../admin.html" class="brand-logo">
+                    <img src="../../assets/images/logo.png" alt="logo" width="90%">
+                </a>
+            </div>
+            <div class="mdc-drawer__content">
+                <div class="user-info">
+                    <p class="name" id="nombreUsuario"></p>
+                    <p class="email" id="emailUsuario"></p>
+                </div>
+                <div class="mdc-list-group">
+                    <nav class="mdc-list mdc-drawer-menu">
+                        <div class="mdc-list-item mdc-drawer-item">
+                            <a class="mdc-drawer-link" href="../../admin.html">
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">home</i>
+                                Inicio
+                            </a>
+                        </div>
+                        <div class="mdc-list-item mdc-drawer-item">
+                            <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                                data-target="ui-sub-menu">
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">list</i>
+                                Lista Pokemon
+                                <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                            </a>
+                            <div class="mdc-expansion-panel" id="ui-sub-menu">
+                                <nav class="mdc-list mdc-drawer-submenu">
+                                    <div class="mdc-list-item mdc-drawer-item">
+                                        <a class="mdc-drawer-link" href="../../pages/pokemon/pokemonlist.html">
+                                            <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                                aria-hidden="true">perm_media</i>
+                                            Generación 1
+                                        </a>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mdc-list-item mdc-drawer-item">
+                            <a class="mdc-drawer-link" href="../pokemon/pokemon-favorito.html">
+                                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                                    aria-hidden="true">favorite</i>
+                                Pokemon Favoritos
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+        <!-- partial -->
+        <div class="main-wrapper mdc-drawer-app-content">
+            <!-- partial:partials/_navbar.html -->
+            <header class="mdc-top-app-bar">
+                <div class="mdc-top-app-bar__row">
+                    <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                        <button
+                            class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
+                        <div
+                            class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
+                            <i class="material-icons mdc-text-field__icon">search</i>
+                            <input class="mdc-text-field__input" id="text-field-hero-input">
+                            <div class="mdc-notched-outline">
+                                <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                    <label for="text-field-hero-input" class="mdc-floating-label">Buscar..</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
+                        <div class="menu-button-container menu-profile d-none d-md-block">
+                            <button class="mdc-button mdc-menu-button">
+                                <span class="d-flex align-items-center justify-content-center">
+                                    <span class="figure">
+                                        <img src="../../assets/images/faces/face1.jpg" alt="user" class="user">
+                                    </span>
+                                    <span class="user-name"></span>
+                                </span>
+                            </button>
+                            <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+                                <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                                    <li class="mdc-list-item" role="menuitem">
+                                        <div class="item-thumbnail item-thumbnail-icon-only">
+                                            <i class="mdi mdi-account-edit-outline text-primary"></i>
+                                        </div>
+                                        <div
+                                            class="item-content d-flex align-items-start flex-column justify-content-center">
+                                            <a href="../pokemon/edit-user.html">
+                                                <h6 class="item-subject font-weight-normal">Editar perfil</h6>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="mdc-list-item" role="menuitem">
+                                        <div class="item-thumbnail item-thumbnail-icon-only">
+                                            <i class="mdi mdi-settings-outline text-primary"></i>
+                                        </div>
+                                        <div
+                                            class="item-content d-flex align-items-start flex-column justify-content-center">
+                                            <a href="../../index.html">
+                                                <h6 class="item-subject font-weight-normal">Cerrar Sesión</h6>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- partial -->
+            <div class="page-wrapper mdc-toolbar-fixed-adjust">
+                <main class="content-wrapper">
+                    <div class="mdc-layout-grid">
+                        <div class="pokedex-container">
+                            <div class="pokedex__header">
+                                <div class="pokedex__header-title">
+                                    <h1 style="font-family: 'Righteous', cursive;">Perfil de Usuario</h1>
+                                </div>
+                            </div>
+                            <br>
+                                <div
+                                    class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
+                                    <div class="mdc-card info-card info-card--success">
+                                        <div class="card-inner" style="color:#000">
+                                            <h5 class="card-title" id="cardUserTitle"></h5>
+                                            <h5 class="font-weight-light pb-2 mb-1 border-bottom" id="cardUserEmail">
+                                            </h5>
+                                            <p class="tx-12 text-muted" id="cardUserCreatedAt"></p>
+                                            <div class="card-icon-wrapper">
+                                                <img src="../../assets/images/faces/face1.jpg" alt="user" class="user">
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </main>
+                <!-- partial:partials/_footer.html -->
+                <footer>
+                    <div class="mdc-layout-grid">
+                        <div class="mdc-layout-grid__inner">
+                            <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                                <span class="text-center text-sm-left d-block d-sm-inline-block tx-14">Pokedex App<a
+                                        href="#" target="_blank"> | Certus</a> 2022</span>
+                            </div>
+                            <div
+                                class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop d-flex justify-content-end">
+                                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center tx-14"> <a
+                                        href="https://www.bootstrapdash.com/material-design-dashboard/" target="_blank">
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+        </div>
+    </div>
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../../assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="../../assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="../../assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../assets/js/material.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../assets/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../js/user-info.js"></script>
+    <!-- End custom js for this page-->
+</body>
+
+</html>
