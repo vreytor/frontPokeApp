@@ -36,7 +36,7 @@ function addFavourites() {
             type: type
         }
 
-        console.log(pokeData);
+        // console.log(pokeData);
 
         // Agregamos una llamada a la API para obtener la lista de Pokémon favoritos del usuario
         fetch(`https://backapipoke-production.up.railway.app/api/favoritos/`, {

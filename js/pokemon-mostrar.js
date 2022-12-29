@@ -76,7 +76,7 @@ function showPokemonName(pokemonName) {
     .then((data) => {
         const name = data.name;
         const nameUpperCase = data.name[0].toUpperCase() + data.name.slice(1);
-        console.log(name, 'Nombre pokimon')
+        // console.log(name, 'Nombre pokimon')
         // if (verifyFavourites(name) == true ) {
         //     let text_content = `<div class="info ${name} favorite-pokemon"><h3 class="name">${name}</h3></div>`
         //     pokemons_container.innerHTML += text_content;
