@@ -10,7 +10,7 @@ function obtenerFavoritos() {
         
         const filteredData = filterByUserId(data, user_uid);
 
-        console.log(filteredData,'filteredData');
+        // console.log(filteredData,'filteredData');
 
         muestraPokemonFavorito(filteredData)
     });
