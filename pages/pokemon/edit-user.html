@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="../../assets/css/demo/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!-- Fontawesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -161,25 +164,25 @@
                             </div>
                             <br>
                             <div>
-                                <div class="input-boxes">
+                                <div class="input-boxes" style="justify-content: center; display: flex; flex-direction: column; align-items: center;">
                                     <div class="input-box">
-                                      <i class="fas fa-user"></i>
-                                      <input id="nombre" type="text" placeholder="Nombre" required>
+                                      <i class="fas fa-user m-2"></i>
+                                      <input id="nombre" type="text" class="input mb-3" placeholder="Nombre" required style="border: none; padding: 5px; border-radius: 3px;">
                                     </div>
                                     <div class="input-box">
-                                      <i class="fas fa-user"></i>
-                                      <input id="apellido" type="text" placeholder="Apellido" required>
+                                      <i class="fas fa-user m-2"></i>
+                                      <input id="apellido" type="text" class="input mb-3" placeholder="Apellido" required style="border: none; padding: 5px; border-radius: 3px;">
                                     </div>
-                                    <div class="input-box">
-                                      <i class="fas fa-envelope"></i>
-                                      <input id="correo" type="text" placeholder="Correo" required>
+                                    <div class="input-box ">
+                                      <i class="fas fa-envelope m-2"></i>
+                                      <input id="correo" type="text" class="input mb-3" placeholder="Correo" required style="border: none; padding: 5px; border-radius: 3px;">
                                     </div>
-                                    <div class="input-box">
-                                      <i class="fas fa-lock"></i>
-                                      <input id="password" type="password" placeholder="Contraseña" required>
+                                    <div class="input-box ">
+                                      <i class="fas fa-lock m-2"></i>
+                                      <input id="password" type="password" class="input mb-3" placeholder="Contraseña" required style="border: none; padding: 5px; border-radius: 3px;">
                                     </div>
                                     <div class="button input-box">
-                                      <input id="guardar" type="submit" onclick='formEditUser()' value="Guardar">
+                                      <input id="guardar" type="submit" onclick='formEditUser()' value="Guardar" style="padding: 5px;">
                                     </div>
                                     
                                 </div>
