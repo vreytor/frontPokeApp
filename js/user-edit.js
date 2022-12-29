@@ -34,7 +34,7 @@ const formEditUser = () =>{
           } else {
             //Manejar rutas si entra acá lo metes a tu admin template y muestras topdo lo que quieres hacer
             //console.log('Uusario Creado con éxito jejeje');
-            alert('Usuario modificado con éxito');
+            alert('Usuario modificado con éxito, los resultados se contemplaran al volver a iniciar sesión');
   
           }
         })

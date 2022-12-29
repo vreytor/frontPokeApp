@@ -23506,6 +23506,10 @@ body {
   background-color: pink;
 }
 
+#guardar:hover {
+  background-color: lightblue;
+}
+
 @media (max-width:1400px) {
   #pokemon_img_text {
     margin-bottom: -80px;
