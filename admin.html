@@ -80,18 +80,7 @@
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button
               class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
-            <div
-              class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
-              <i class="material-icons mdc-text-field__icon">search</i>
-              <input class="mdc-text-field__input" id="text-field-hero-input">
-              <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading"></div>
-                <div class="mdc-notched-outline__notch">
-                  <label for="text-field-hero-input" class="mdc-floating-label">Buscar..</label>
-                </div>
-                <div class="mdc-notched-outline__trailing"></div>
-              </div>
-            </div>
+            
           </div>
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
             <div class="menu-button-container menu-profile d-none d-md-block">
@@ -110,7 +99,7 @@
                       <i class="mdi mdi-account-edit-outline text-primary"></i>
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Edit profile</h6>
+                      <h6 class="item-subject font-weight-normal">Editar perfil</h6>
                     </div>
                   </li>
                   <li class="mdc-list-item" role="menuitem">
@@ -118,7 +107,7 @@
                       <i class="mdi mdi-settings-outline text-primary"></i>
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Logout</h6>
+                      <a href="./index.html"><h6 class="item-subject font-weight-normal">Cerrar sesión</h6></a> 
                     </div>
                   </li>
                 </ul>
@@ -141,7 +130,7 @@
                     <h5 class="font-weight-light pb-2 mb-1 border-bottom">151 Pokemon</h5>
                     <p class="tx-12 text-muted">18.83% del total</p>
                     <div class="card-icon-wrapper">
-                      <i class="material-icons">person</i>
+                      <img src="./assets/images/pokemon_icons/pikachu.png"></img>
                     </div>
                   </div>
                 </div>
@@ -154,7 +143,7 @@
                     <h5 class="font-weight-light pb-2 mb-1 border-bottom">100 Pokemon</h5>
                     <p class="tx-12 text-muted">12,47 % del total</p>
                     <div class="card-icon-wrapper">
-                      <i class="material-icons">person</i>
+                      <img src="./assets/images/pokemon_icons/chicorita.png"></img>
                     </div>
                   </div>
                 </div>
@@ -167,7 +156,7 @@
                     <h5 class="font-weight-light pb-2 mb-1 border-bottom">135 Pokemon</h5>
                     <p class="tx-12 text-muted">16,83 % del total</p>
                     <div class="card-icon-wrapper">
-                      <i class="material-icons">person</i>
+                      <img src="./assets/images/pokemon_icons/Torchic.webp"></img>
                     </div>
                   </div>
                 </div>
@@ -180,18 +169,72 @@
                     <h5 class="font-weight-light pb-2 mb-1 border-bottom">107 Pokemon</h5>
                     <p class="tx-12 text-muted">13,34 % del total</p>
                     <div class="card-icon-wrapper">
-                      <i class="material-icons">person</i>
+                      <img src="./assets/images/pokemon_icons/Piplup.webp"></img>
                     </div>
                   </div>
                 </div>
               </div>
+              <div
+                class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
+                <div class="mdc-card info-card info-card--info">
+                  <div class="card-inner">
+                    <h5 class="card-title">Quinta Generación</h5>
+                    <h5 class="font-weight-light pb-2 mb-1 border-bottom">156 Pokemon</h5>
+                    <p class="tx-12 text-muted">19,45 % del total</p>
+                    <div class="card-icon-wrapper">
+                      <img src="./assets/images/pokemon_icons/Drilbur.webp"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
+                <div class="mdc-card info-card info-card--primary">
+                  <div class="card-inner">
+                    <h5 class="card-title">Sexta Generación</h5>
+                    <h5 class="font-weight-light pb-2 mb-1 border-bottom">72 Pokemon</h5>
+                    <p class="tx-12 text-muted">8,98 % del total</p>
+                    <div class="card-icon-wrapper">
+                      <img src="./assets/images/pokemon_icons/Chespin.webp"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
+                <div class="mdc-card info-card info-card--danger">
+                  <div class="card-inner">
+                    <h5 class="card-title">Septima Generación</h5>
+                    <h5 class="font-weight-light pb-2 mb-1 border-bottom">81 Pokemon</h5>
+                    <p class="tx-12 text-muted">10,1 % del total</p>
+                    <div class="card-icon-wrapper">
+                      <img src="./assets/images/pokemon_icons/Rowlet.webp"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
+                <div class="mdc-card info-card info-card--success">
+                  <div class="card-inner">
+                    <h5 class="card-title">Octava Generación</h5>
+                    <h5 class="font-weight-light pb-2 mb-1 border-bottom">93 Pokemon</h5>
+                    <p class="tx-12 text-muted">En desarrollo</p>
+                    <div class="card-icon-wrapper">
+                      <img src="./assets/images/pokemon_icons/Raboot.webp"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
                 <div class="mdc-card">
                   <div class="d-flex justify-content-between">
-                    <h4 class="card-title mb-0">Revenue by location</h4>
+                    <h4 class="card-title mb-0">Campeones Liga Pokemon</h4>
                   </div>
                   <div class="d-block d-sm-flex justify-content-between align-items-center">
-                    <h5 class="card-sub-title mb-2 mb-sm-0">Sales performance revenue based by country</h5>
+                    <h5 class="card-sub-title mb-2 mb-sm-0">Entrenador campeón y su pokemon más fuerte</h5>
                   </div>
                   <div class="mdc-layout-grid__inner mt-2">
                     <div
@@ -202,43 +245,62 @@
                             <tr>
                               <td>
                                 <span class="flag-icon-container"><i
-                                    class="flag-icon flag-icon-us mr-2"></i></span>United States
-                              </td>
-                              <td>$1,671.10</td>
-                              <td class=" font-weight-medium"> 39% </td>
+                                    class="flag-icon flag-icon-lu mr-2"></i></span>Kanto</td>
+                              <td>Lance</td>
+                              <td class=" font-weight-medium"> Gyarados Rojo </td>
                             </tr>
                             <tr>
                               <td> <span class="flag-icon-container"><i
-                                    class="flag-icon flag-icon-ph mr-2"></i></span>Philippines </td>
-                              <td>$1,064.75</td>
-                              <td class=" font-weight-medium"> 30% </td>
+                                    class="flag-icon flag-icon-ga mr-2"></i></span>Johto</td>
+                              <td>Lance</td>
+                              <td class=" font-weight-medium"> Gyarados Rojo </td>
                             </tr>
                             <tr>
                               <td> <span class="flag-icon-container"><i
-                                    class="flag-icon flag-icon-gb mr-2"></i></span>United Kingdom</td>
-                              <td>$1,055.98</td>
-                              <td class=" font-weight-medium"> 45% </td>
+                                    class="flag-icon flag-icon-so mr-2"></i></span>Hoenn</td>
+                              <td>Steven Stone</td>
+                              <td class=" font-weight-medium"> Metagross </td>
                             </tr>
                             <tr>
                               <td> <span class="flag-icon-container"><i
-                                    class="flag-icon flag-icon-ca mr-2"></i></span>Canada</td>
-                              <td>$1,045.49</td>
-                              <td class=" font-weight-medium"> 80% </td>
+                                    class="flag-icon flag-icon-mg mr-2"></i></span>Sinnoh</td>
+                              <td>Cynthia</td>
+                              <td class=" font-weight-medium"> Garchomp </td>
                             </tr>
                             <tr>
                               <td> <span class="flag-icon-container"><i
-                                    class="flag-icon flag-icon-fr mr-2"></i></span>France</td>
-                              <td>$2,050.93</td>
-                              <td class=" font-weight-medium"> 10% </td>
+                                    class="flag-icon flag-icon-bw mr-2"></i></span>Unova</td>
+                              <td>Iris</td>
+                              <td class=" font-weight-medium"> Excadrill </td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i
+                                    class="flag-icon flag-icon-la mr-2"></i></span>Kalos</td>
+                              <td>Diantha</td>
+                              <td class=" font-weight-medium"> Gardevoir </td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i
+                                    class="flag-icon flag-icon-vc mr-2"></i></span>Alola</td>
+                              <td>Ash Ketchum</td>
+                              <td class=" font-weight-medium"> Pikachu </td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i
+                                    class="flag-icon flag-icon-pw mr-2"></i></span>Galar</td>
+                              <td>Lionel</td>
+                              <td class=" font-weight-medium"> Charizard </td>
                             </tr>
                           </tbody>
                         </table>
+                        <small>Fuente: wikidex.net</small>
                       </div>
                     </div>
-                    <div
-                      class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet">
-                      <div id="revenue-map" class="revenue-world-map"></div>
+                    
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet">
+                      <img src="./Images/campeones.png"></img>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -250,14 +312,14 @@
           <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                <span class="text-center text-sm-left d-block d-sm-inline-block tx-14"><a
-                    href="#" target="_blank">PokedexCertus </a>2022</span>
+                <span class="text-center text-sm-left d-block d-sm-inline-block tx-14">Pokedex App<a
+                    href="#" target="_blank"> | Certus </a>2022</span>
               </div>
               <div
                 class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop d-flex justify-content-end">
-                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center tx-14">Free <a
-                    href="#" target="_blank"> material admin </a>
-                  dashboards from Bootstrapdash.com</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center tx-14"> <a
+                    href="#" target="_blank">  </a>
+                  </span>
               </div>
             </div>
           </div>
